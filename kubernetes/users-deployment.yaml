@@ -16,7 +16,6 @@ spec:
         - name: users
           image: chronopa/user-api
           env:
-            - name: AUTH_ADRESS
-              value: localhost
-        - name: auth
-          image: chronopa/kub-demo-auth  
+            - name: AUTH_ADDRESS
+              value: "10.98.83.63"
+    
