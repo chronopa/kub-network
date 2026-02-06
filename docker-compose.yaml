@@ -1,0 +1,16 @@
+version: "1"
+services:
+  auth:
+    build: ./authapi
+  users:
+    build: ./users-api
+    enviroment:
+      AUTH_ADRESS: auth
+    ports:
+      - "8080:8080"
+  tasks:
+    build: ./tasks-api
+    ports:
+      - "8000:8000"  
+    enviroment:
+      TASKS_FOLDER: tasks    
